@@ -153,7 +153,21 @@ nav.primary-nav a[aria-current="page"] {
 
 /* ---------- Main / hero ---------- */
 
-main { padding: 56px 0 40px; }
+main { padding-bottom: 40px; }
+
+main section.container {
+  padding-top: 64px;
+  scroll-margin-top: 84px;
+}
+main section.container:first-of-type {
+  padding-top: 56px;
+  scroll-margin-top: 0;
+}
+main section.container + section.container {
+  border-top: 1px solid var(--border);
+}
+
+.section-title { margin-top: 0; }
 
 .hero {
   display: flex;

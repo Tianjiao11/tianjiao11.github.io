@@ -14,24 +14,26 @@
 
 <header class="site-header">
   <div class="nav-inner">
-    <a class="site-name" href="index.html">Tianjiao Li</a>
+    <a class="site-name" href="#top">Tianjiao Li</a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="primary-nav">
       <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main>
-  <div class="container">
 
-    <div class="hero">
-      <img class="hero-photo" src="images/profile-placeholder.svg" alt="Portrait of Tianjiao Li">
+  <!-- ===================== Home ===================== -->
+  <section id="top" class="container">
+
+    <div class="hero hero-no-photo">
       <div class="hero-text">
         <div class="eyebrow">Department of Accountancy &amp; Finance</div>
         <h1>Tianjiao Li</h1>
@@ -46,47 +48,129 @@
       quantitative finance.
     </p>
 
-    <h2>Research interests</h2>
-    <p>Derivatives and Quantitative Finance.</p>
+  </section>
 
-    <h2>Recent work</h2>
+  <!-- ===================== Research ===================== -->
+  <section id="research" class="container">
+    <h2 class="section-title">Research</h2>
+    <p class="lede">My research interests are in derivatives and quantitative finance.</p>
+
+    <h3>Publications</h3>
     <ul class="pub-list">
       <li class="pub">
-        <span class="pub-tag">Published</span>
+        <span class="pub-tag">Journal article</span>
         <div class="pub-title">Does short-term momentum exist in China?</div>
         <div class="pub-meta">
-          with Tian Yue and Xinfeng Ruan &middot; Pacific-Basin Finance Journal, Vol. 77 (2023), 101920 &middot;
-          <a href="https://doi.org/10.1016/j.pacfin.2022.101920" target="_blank" rel="noopener">DOI</a>
+          with Tian Yue and Xinfeng Ruan<br>
+          Pacific-Basin Finance Journal, Vol. 77 (2023), Article 101920<br>
+          <a href="https://doi.org/10.1016/j.pacfin.2022.101920" target="_blank" rel="noopener">https://doi.org/10.1016/j.pacfin.2022.101920</a>
         </div>
       </li>
+    </ul>
+
+    <h3>Working papers</h3>
+    <ul class="pub-list">
       <li class="pub">
         <span class="pub-tag">Working paper</span>
         <div class="pub-title">Covid-19 tail risk in the Euro-Dollar option market</div>
         <div class="pub-meta">with Xinfeng Ruan, Professor Jin&nbsp;E. Zhang, and Pakorn (Beam) Aschakulporn</div>
       </li>
     </ul>
-    <p><a href="research.html">See full research page &rarr;</a></p>
 
-    <h2>Elsewhere</h2>
+    <h3>Presentations &amp; other work</h3>
+    <div class="placeholder">
+      <strong>Add here:</strong> conference talks, seminars, discussant roles, awards for papers,
+      or datasets/code you want to point people to. Copy the <code>&lt;li class="pub"&gt;</code>
+      pattern above for each entry.
+    </div>
+  </section>
+
+  <!-- ===================== Projects ===================== -->
+  <section id="projects" class="container">
+    <h2 class="section-title">Projects</h2>
     <div class="card-grid">
       <div class="card">
-        <h3>CV</h3>
-        <p>Education, positions, and awards.</p>
-        <a href="cv.html">View CV &rarr;</a>
-      </div>
-      <div class="card">
-        <h3>GitHub</h3>
-        <p>Code and projects.</p>
-        <a href="https://github.com/Tianjiao11" target="_blank" rel="noopener">github.com/Tianjiao11 &rarr;</a>
-      </div>
-      <div class="card">
-        <h3>Contact</h3>
-        <p>Office, email, and links.</p>
-        <a href="contact.html">Get in touch &rarr;</a>
+        <h3>[Project name]</h3>
+        <p>[One or two sentences on what it does.]</p>
+        <a href="#">View &rarr;</a>
       </div>
     </div>
+    <div class="placeholder">
+      <strong>Add here:</strong> tell me the project's name, a short description, and a link
+      (GitHub repo, live demo, or paper), and I'll fill this card in for you — or copy the
+      <code>&lt;div class="card"&gt;</code> block above yourself for each project.
+    </div>
+  </section>
 
-  </div>
+  <!-- ===================== CV ===================== -->
+  <section id="cv" class="container">
+    <h2 class="section-title">CV</h2>
+    <p class="lede">
+      A short version lives here; happy to send the full PDF on request once you've added one
+      (see the placeholder note in <a href="#contact">Contact</a>).
+    </p>
+
+    <h3>Education</h3>
+    <div class="cv-entry">
+      <span class="when">[start year] – present</span>
+      <div class="what">PhD in Finance</div>
+      <div class="where">University of Otago, Dunedin, New Zealand &middot; Supervisors: Dr Pakorn (Beam) Aschakulporn, Professor Jin&nbsp;E. Zhang</div>
+    </div>
+    <div class="placeholder">
+      <strong>Add here:</strong> the year you started your PhD (replace <code>[start year]</code>
+      above), plus your earlier degrees — institution, degree, years, thesis title if relevant
+      (e.g. Master's and Bachelor's). Copy the <code>&lt;div class="cv-entry"&gt;</code> block
+      above for each one, oldest at the bottom.
+    </div>
+
+    <h3>Positions &amp; experience</h3>
+    <div class="placeholder">
+      <strong>Add here:</strong> teaching assistantships, research assistant roles, internships,
+      or prior work experience — institution, role, and years.
+    </div>
+
+    <h3>Awards &amp; fellowships</h3>
+    <div class="placeholder">
+      <strong>Add here:</strong> scholarships, grants, conference travel awards, or academic prizes.
+    </div>
+
+    <h3>Skills</h3>
+    <div class="placeholder">
+      <strong>Add here:</strong> languages (programming and spoken), software (e.g. R, Python,
+      MATLAB, Stata), and any other relevant skills.
+    </div>
+
+    <p><a href="#research">Publications are listed under Research above &rarr;</a></p>
+  </section>
+
+  <!-- ===================== Contact ===================== -->
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-row">
+      <span class="contact-label">Email</span>
+      <a href="mailto:tianjiao.li@postgrad.otago.ac.nz">tianjiao.li@postgrad.otago.ac.nz</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">Office</span>
+      <span>OBS 5.22, Department of Accountancy &amp; Finance, University of Otago</span>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">Address</span>
+      <span>Dunedin, New Zealand</span>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">GitHub</span>
+      <a href="https://github.com/Tianjiao11" target="_blank" rel="noopener">github.com/Tianjiao11</a>
+    </div>
+
+    <h3>More links</h3>
+    <div class="placeholder">
+      <strong>Add here:</strong> Google Scholar, ORCID, LinkedIn, Twitter/X, SSRN, or a CV PDF
+      link — copy a <code>&lt;div class="contact-row"&gt;</code> block above for each one.
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">

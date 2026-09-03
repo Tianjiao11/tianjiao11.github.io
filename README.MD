@@ -1,17 +1,21 @@
 # tianjiao11.github.io — redesign
 
-A clean, minimal-academic 4-page rebuild of the site: `index.html` (Home),
-`research.html`, `cv.html`, `contact.html`, sharing `css/style.css` and
-`js/nav.js` (mobile menu toggle).
+A clean, minimal-academic single-page site: `index.html`, with sections for
+Home, Research, Projects, CV, and Contact. The nav bar links jump to each
+section on the same page (smooth-scrolling), rather than loading separate
+pages. Shares `css/style.css` and `js/nav.js` (mobile menu toggle, which
+also closes itself after you tap a link).
 
 ## Deploy
 
 1. Open your `tianjiao11.github.io` repo.
-2. Delete the old `index.html`, `css/`, `js/`, and `images/` (or just replace
-   them — the new files use the same names).
-3. Copy everything in this folder into the repo root.
-4. Commit and push to the `master`/`main` branch. GitHub Pages will publish
-   the new site automatically — usually within a minute or two.
+2. Delete `research.html`, `cv.html`, and `contact.html` if they're still
+   there from an earlier version — everything now lives in `index.html`.
+3. Copy everything in this folder into the repo root, overwriting the old
+   `index.html`, `css/`, `js/`, and `images/`.
+4. Commit and push to the `master`/`main`/`new` branch (whichever your
+   GitHub Pages source is set to). GitHub Pages will publish automatically —
+   usually within a minute or two.
 
 No build step, no dependencies — it's plain HTML/CSS/JS, so this works with
 GitHub Pages out of the box.
@@ -19,20 +23,22 @@ GitHub Pages out of the box.
 ## Things to fill in
 
 A few spots are intentionally left as placeholders rather than guessed, so
-you don't end up with invented dates or degrees. Search each file for
-`class="placeholder"` or `[start year]`:
+you don't end up with invented dates or degrees. Search `index.html` for
+`class="placeholder"` or `[...]`:
 
-- **`index.html`** — swap `images/profile-placeholder.svg` for an actual
-  photo (drop a `profile.jpg` into `images/` and update the `src`).
-- **`cv.html`** — PhD start year, earlier degrees, positions/experience,
+- **Projects section** — project name, short description, and a link.
+- **CV section** — PhD start year, earlier degrees, positions/experience,
   awards, and skills.
-- **`research.html`** — talks, seminars, or other work you want listed.
-- **`contact.html`** — Google Scholar, ORCID, LinkedIn, or a CV PDF link.
+- **Research section** — talks, seminars, or other work you want listed.
+- **Contact section** — Google Scholar, ORCID, LinkedIn, or a CV PDF link.
+
+The profile photo was intentionally removed (no placeholder image or photo
+on the site) — this was a deliberate choice, not something left unfinished.
 
 ## Content carried over from the old site
 
 Everything else (bio, supervisors, department, the published paper, the
-working paper, office, and email) was taken directly from the current live
+working paper, office, and email) was taken directly from the original live
 site, so nothing there should need changing.
 
 ## Customizing the look
@@ -42,3 +48,7 @@ site, so nothing there should need changing.
   re-theme the whole site).
 - Dark mode follows the visitor's OS setting automatically (see the
   `prefers-color-scheme: dark` block in the CSS).
+- Each section is a `<section id="..." class="container">` block in
+  `index.html` — the nav links point at those ids (e.g. `#research`). Adding
+  a new section means adding both the `<section>` and a matching `<li><a
+  href="#your-id">...</a></li>` in the nav.
