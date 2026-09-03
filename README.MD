@@ -1,7 +1,7 @@
 # tianjiao11.github.io — redesign
 
 A clean, minimal-academic single-page site: `index.html`, with sections for
-Home, Research, Projects, CV, and Contact. The nav bar links jump to each
+Home, Research, CV, and Contact. The nav bar links jump to each
 section on the same page (smooth-scrolling), rather than loading separate
 pages. Shares `css/style.css` and `js/nav.js` (mobile menu toggle, which
 also closes itself after you tap a link).
@@ -20,20 +20,11 @@ also closes itself after you tap a link).
 No build step, no dependencies — it's plain HTML/CSS/JS, so this works with
 GitHub Pages out of the box.
 
-## Things to fill in
+## Status
 
-A few spots are intentionally left as placeholders rather than guessed, so
-you don't end up with invented dates or degrees. Search `index.html` for
-`class="placeholder"` or `[...]`:
-
-- **Projects section** — project name, short description, and a link.
-- **CV section** — PhD start year, earlier degrees, positions/experience,
-  awards, and skills.
-- **Research section** — talks, seminars, or other work you want listed.
-- **Contact section** — Google Scholar, ORCID, LinkedIn, or a CV PDF link.
-
-The profile photo was intentionally removed (no placeholder image or photo
-on the site) — this was a deliberate choice, not something left unfinished.
+All sections are filled in — no placeholders left in `index.html`. The
+profile photo was intentionally removed (no placeholder image or photo on
+the site) — a deliberate choice, not something left unfinished.
 
 ## Content carried over from the old site
 
