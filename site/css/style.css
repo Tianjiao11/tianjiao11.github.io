@@ -1,0 +1,280 @@
+/* ===========================================================
+   Tianjiao Li — personal site
+   Minimal academic theme
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #faf9f6;
+  --bg-alt: #f2f0ea;
+  --text: #232220;
+  --text-muted: #5c5a55;
+  --border: #e1ded4;
+  --accent: #7a1f2b;       /* deep oxblood accent */
+  --accent-soft: #7a1f2b1a;
+  --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --max-width: 760px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171614;
+    --bg-alt: #1f1e1b;
+    --text: #ece9e2;
+    --text-muted: #a8a49a;
+    --border: #34322c;
+    --accent: #d98a92;
+    --accent-soft: #d98a9224;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: 2.1rem; }
+h2 { font-size: 1.4rem; margin-top: 2.6em; }
+h3 { font-size: 1.1rem; font-weight: 500; margin-top: 1.6em; }
+
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+a:hover { border-bottom-color: currentColor; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header / nav ---------- */
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-name {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+  border-bottom: none;
+}
+.site-name:hover { color: var(--accent); }
+
+nav.primary-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.primary-nav a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+}
+
+nav.primary-nav a:hover,
+nav.primary-nav a[aria-current="page"] {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 38px;
+  height: 34px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+@media (max-width: 620px) {
+  nav.primary-nav {
+    display: none;
+    width: 100%;
+    border-top: 1px solid var(--border);
+    margin-top: 14px;
+  }
+  nav.primary-nav.open { display: block; }
+  nav.primary-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding-top: 6px;
+  }
+  nav.primary-nav li { padding: 10px 0; border-bottom: 1px solid var(--border); }
+  nav.primary-nav li:last-child { border-bottom: none; }
+  .nav-inner { flex-wrap: wrap; }
+  .nav-toggle { display: block; }
+}
+
+/* ---------- Main / hero ---------- */
+
+main { padding: 56px 0 40px; }
+
+.hero {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.hero-photo {
+  flex: 0 0 auto;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+
+.hero-text .eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.hero-text h1 { margin-bottom: 4px; }
+.hero-text .role { color: var(--text-muted); font-size: 1.05rem; }
+
+@media (max-width: 520px) {
+  .hero { flex-direction: column; align-items: flex-start; text-align: left; }
+}
+
+.lede { font-size: 1.08rem; color: var(--text-muted); margin-top: 1.6em; }
+
+/* ---------- Cards / lists ---------- */
+
+.pub-list, .link-list { list-style: none; margin: 0; padding: 0; }
+
+.pub {
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+}
+.pub:last-child { border-bottom: 1px solid var(--border); }
+
+.pub-title { font-weight: 600; margin-bottom: 4px; }
+.pub-meta { color: var(--text-muted); font-size: 0.94rem; }
+.pub-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-bottom: 8px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 1.4em;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px;
+  background: var(--bg-alt);
+}
+.card h3 { margin-top: 0; }
+
+.placeholder {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  background: var(--bg-alt);
+}
+.placeholder strong { color: var(--text); }
+
+/* ---------- CV sections ---------- */
+
+.cv-entry { margin-bottom: 1.2em; }
+.cv-entry .when {
+  float: right;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+.cv-entry .what { font-weight: 600; }
+.cv-entry .where { color: var(--text-muted); font-size: 0.95rem; }
+
+/* ---------- Contact ---------- */
+
+.contact-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+.contact-row:last-child { border-bottom: 1px solid var(--border); }
+.contact-label {
+  flex: 0 0 110px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Footer ---------- */
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+  padding: 24px 0 48px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
