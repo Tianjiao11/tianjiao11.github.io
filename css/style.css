@@ -44,7 +44,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: var(--serif);
   font-weight: 600;
   line-height: 1.25;
@@ -53,8 +53,21 @@ h1, h2, h3 {
 }
 
 h1 { font-size: 2.1rem; }
-h2 { font-size: 1.4rem; margin-top: 2.6em; }
-h3 { font-size: 1.1rem; font-weight: 500; margin-top: 1.6em; }
+h2 { font-size: 1.9rem; color: var(--accent); margin-top: 2.6em; }
+
+h3 {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+  margin: 2.3em 0 1em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 84px;
+}
+h2 + h3 { margin-top: 1.6em; }
 
 p { margin: 0 0 1em; }
 
@@ -204,15 +217,25 @@ main section.container + section.container {
 
 .lede { font-size: 1.08rem; color: var(--text-muted); margin-top: 1.6em; }
 
+.section-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 0 0 0.5em;
+  font-size: 0.88rem;
+}
+.section-jump a {
+  color: var(--text-muted);
+  border-bottom: 1px solid transparent;
+}
+.section-jump a:hover { color: var(--accent); border-bottom-color: currentColor; }
+
 /* ---------- Cards / lists ---------- */
 
 .pub-list, .link-list { list-style: none; margin: 0; padding: 0; }
 
-.pub {
-  padding: 18px 0;
-  border-top: 1px solid var(--border);
-}
-.pub:last-child { border-bottom: 1px solid var(--border); }
+.pub { padding: 10px 0; }
+.pub + .pub { margin-top: 6px; }
 
 .pub-title { font-weight: 600; margin-bottom: 4px; }
 .pub-meta { color: var(--text-muted); font-size: 0.94rem; }
@@ -242,7 +265,17 @@ main section.container + section.container {
   padding: 18px;
   background: var(--bg-alt);
 }
-.card h3 { margin-top: 0; }
+.card h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text);
+  margin: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
 
 .placeholder {
   border: 1px dashed var(--border);
@@ -271,10 +304,8 @@ main section.container + section.container {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  padding: 10px 0;
-  border-top: 1px solid var(--border);
+  padding: 6px 0;
 }
-.contact-row:last-child { border-bottom: 1px solid var(--border); }
 .contact-label {
   flex: 0 0 110px;
   color: var(--text-muted);
